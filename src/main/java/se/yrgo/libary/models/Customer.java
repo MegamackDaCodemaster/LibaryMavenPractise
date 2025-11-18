@@ -2,7 +2,7 @@ package se.yrgo.libary.models;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-import utilities.GenderType;
+import se.yrgo.libary.utilities.GenderType;
 
 
 public class Customer {
@@ -32,7 +32,7 @@ public class Customer {
 		gCal.add(GregorianCalendar.YEAR, 1);
 		this.expiryDate = gCal.getTime();
 	}
-	
+
 	public String getFirstName() {
 		return firstName;
 	}

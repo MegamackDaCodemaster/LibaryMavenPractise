@@ -1,11 +1,6 @@
 package se.yrgo.libary.ui;
-import models.Book;
-import models.BookCatalog;
-import models.BookNotFoundException;
-import models.Customer;
-import models.Loan;
-import models.LoanAlreadyExistsException;
-import utilities.GenderType;
+import se.yrgo.libary.models.*;
+import se.yrgo.libary.utilities.*;
 
 public class Main {
 
