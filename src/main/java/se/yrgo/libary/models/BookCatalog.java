@@ -13,7 +13,7 @@ public class BookCatalog {
 	public int getNumberOfBooks() {
 		return nextPosition;
 	}
-	
+
 	public void addBook(Book newBook) {
 		bookArray[nextPosition] = newBook;
 		nextPosition++;

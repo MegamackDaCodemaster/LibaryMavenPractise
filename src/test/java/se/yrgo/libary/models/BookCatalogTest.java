@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.function.BooleanSupplier;
+
 public class BookCatalogTest {
 
 	private BookCatalog bc;
@@ -16,15 +18,18 @@ public class BookCatalogTest {
 	}
 
 	//G
-	@Test
+    @Test
 	public void testAddABook() {
-
+        assertNotNull(bc);
+        System.out.println(bc.getBookArray());
 	}
 
 	//G
 	@Test
-	public void testFindBook() {
-
+	public void testFindBook() throws BookNotFoundException {
+        String title = "Learning Java";
+        System.out.println(bc.findBook(title));
+        assertTrue(true);
 	}
 
 	//G
