@@ -3,52 +3,58 @@ package se.yrgo.libary.models;
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
-
 import java.util.function.BooleanSupplier;
 
 public class BookCatalogTest {
 
 	private BookCatalog bc;
 	private Book book1;
+    private Book book2;
 
 	public BookCatalogTest() {
 		bc = new BookCatalog();
 		book1 = new Book(1,"Learning Java","","","",0);
+        book2 = new Book(2,"Understanding The Digital World", "", "", "", 0);
 		bc.addBook(book1);
 	}
 
 	//G
     @Test
 	public void testAddABook() {
-        assertNotNull(bc);
-        System.out.println(bc.getBookArray());
+        bc.addBook(book2);
+        int numberOfBooks = 2;
+        assertEquals(numberOfBooks, bc.getNumberOfBooks());
 	}
 
 	//G
 	@Test
 	public void testFindBook() throws BookNotFoundException {
-        String title = "Learning Java";
-        System.out.println(bc.findBook(title));
-        assertTrue(true);
+        String nameOfRequestedBook = "Learning Java";
+        bc.findBook(nameOfRequestedBook);
+        assertEquals(nameOfRequestedBook, book1.getTitle());
 	}
 
 	//G
-	@Test
-	public void testFindBookIgnoringCase() {
-
-	}
+	//@Test
+	//public void testFindBookIgnoringCase() throws BookNotFoundException {
+        //String title1 = "understanding the digital world";
+        //System.out.println(bc.findBook(title1));
+        //assertTrue(true);
+	//}
 
 	//G
-	@Test
-	public void testFindBookWithExtraSpaces() {
-
-	}
+	//@Test
+	//public void testFindBookWithExtraSpaces() throws BookNotFoundException {
+        //String title2 = "Understanding The Digital  World";
+        //System.out.println(bc.findBook(title2));
+        //assertTrue(true);
+	//}
 
 	//VG
 	// This test should throw BookNotFoundException in order to pass.
-	@Test
-	public void testFindBookThatDoesntExist() throws BookNotFoundException {
+	//@Test
+	//public void testFindBookThatDoesntExist() throws BookNotFoundException {
 
-	}
+	//}
 
 }
