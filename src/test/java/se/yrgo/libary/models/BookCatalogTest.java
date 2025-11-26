@@ -35,20 +35,22 @@ public class BookCatalogTest {
 	}
 
 	//G
-	//@Test
-	//public void testFindBookIgnoringCase() throws BookNotFoundException {
-        //String title1 = "understanding the digital world";
-        //System.out.println(bc.findBook(title1));
-        //assertTrue(true);
-	//}
+	@Test
+	public void testFindBookIgnoringCase() throws BookNotFoundException {
+        bc.addBook(book2);
+        Book requested = new Book(2,"understanding the digital world", "", "", "", 0);
+        assertEquals(requested, book2);
+        bc.findBook(requested.getTitle());
+	}
 
 	//G
-	//@Test
-	//public void testFindBookWithExtraSpaces() throws BookNotFoundException {
-        //String title2 = "Understanding The Digital  World";
-        //System.out.println(bc.findBook(title2));
-        //assertTrue(true);
-	//}
+	@Test
+	public void testFindBookWithExtraSpaces() throws BookNotFoundException {
+        bc.addBook(book1);
+        String nameOfRequestedBook = " Learning Java";
+        Book exist = bc.findBook(nameOfRequestedBook);
+        assertEquals(exist, book1);
+	}
 
 	//VG
 	// This test should throw BookNotFoundException in order to pass.
