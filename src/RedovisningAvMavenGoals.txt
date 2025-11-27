@@ -1,0 +1,19 @@
+//Maven Goals som använts i projektet:
+
+---Jag har använt Maven Goals grafiskt via IntelliJs grännsnitt, inte terminalen---
+
+Lifecycle -> compile: Kompilerar klasserna i "java-mappen" och bygger projektet via byggstrukturen i
+pom.xml filen (kärnan i Maven), som talar om hur applikationen ska byggas och i vilken ordning.
+
+Lifecycle -> test: Kompilerar "test-mappen" och kör alla testklasser automatiskt. Använder
+bland annat "surefire" plugin från JUnit som ser till att testklasserna kan köras.
+
+Plugins -> javadoc -> javadoc:javadoc: Genererar en "site-mapp" i target med undermappen "apidocs"
+bygger en index.html fil, mallen för projektets javadocsida som öppnas och läses i webbläsaren.
+Där man kan läsa mer info om klasserna, metoderna mm.
+
+Lifecycle -> clean: Rensar projektet, raderar target-mappen och tar bort gamla byggen.
+
+Lifecycle -> package: packeterar hela applikationen till en jar-fil, det är denna fil som kunden
+kommer att få tillgång till i slutändan för att kunna komma åt och köra applikationen
+enkelt och smidigt.

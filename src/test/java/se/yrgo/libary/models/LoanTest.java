@@ -9,8 +9,8 @@ import java.time.LocalDate;
 public class LoanTest {
 
 	//VG
-	@Test
-	public void testDueDate() {
+	//@Test
+	//public void testDueDate() {
 
-   }
+   //}
 }

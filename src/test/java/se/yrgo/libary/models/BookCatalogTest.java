@@ -34,7 +34,7 @@ public class BookCatalogTest {
         assertEquals(nameOfRequestedBook, book1.getTitle());
 	}
 
-	//G //--?--//
+	//G
 	@Test
 	public void testFindBookIgnoringCase() throws BookNotFoundException {
         bc.addBook(book2);
@@ -43,7 +43,7 @@ public class BookCatalogTest {
         bc.findBook(requested.getTitle());
 	}
 
-	//G  //--?--//
+	//G
 	@Test
 	public void testFindBookWithExtraSpaces() throws BookNotFoundException {
         bc.addBook(book1);
